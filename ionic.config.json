@@ -1,0 +1,7 @@
+{
+  "name": "OpderanNew",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
