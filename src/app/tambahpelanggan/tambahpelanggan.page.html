@@ -1,0 +1,54 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>Tambah Pelanggan</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/pelanggan"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <form [formGroup]="formPelanggan" (ngSubmit)="submitForm()" novalidate>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-input label="Nama Pelanggan" formControlName="nama" label-placement="floating" fill="outline" placeholder="Masukkan nama"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-input label="No. HP Pelanggan" type="number"  formControlName="no_hp" label-placement="floating" fill="outline" placeholder="Masukkan no hp"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button expand="block" color="primary" shape="round" type="submit">TAMBAH</ion-button>
+        </ion-col>
+      </ion-row>
+      <!-- Error messages -->
+      <ion-row>
+        <ion-text color="danger" class="ion-padding" *ngIf="isSubmitted && errorControl['nama'].errors?.['required']">
+          Nama wajib diisi.
+        </ion-text>
+        <ion-text color="danger" class="ion-padding" *ngIf="isSubmitted && errorControl['nama'].errors?.['minlength']">
+          Nama terdiri dari minimal 5 karakter.
+        </ion-text>
+        <ion-text color="danger" class="ion-padding" *ngIf="isSubmitted && errorControl['no_hp'].errors?.['required']">
+          No HP wajib diisi.
+        </ion-text>
+        <ion-text color="danger" class="ion-padding" *ngIf="isSubmitted && errorControl['no_hp'].errors?.['pattern']">
+          Nomor HP hanya terdiri dari angka.
+        </ion-text>
+        <ion-text color="danger" class="ion-padding" *ngIf="isSubmitted && errorControl['no_hp'].errors?.['minlength']">
+          Nomor HP terdiri dari minimal 10 karakter angka.
+        </ion-text>
+        <ion-text color="danger" class="ion-padding" *ngIf="isExisted">
+          Nama dan No HP sudah ada
+        </ion-text>
+      </ion-row>
+    </ion-grid>
+  </form>
+
+  <ion-loading trigger="open-loading" message="Menyimpan..." ></ion-loading>
+</ion-content>
+

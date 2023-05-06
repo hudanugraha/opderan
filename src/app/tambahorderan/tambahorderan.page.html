@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>Tambah Order</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/produk"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-input label="Lokasi" label-placement="floating" fill="outline" placeholder="Masukkan lokasi"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-input label="Tanggal" label-placement="floating" fill="outline" placeholder="Masukkan tanggal"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="block" color="primary" shape="round">TAMBAH</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

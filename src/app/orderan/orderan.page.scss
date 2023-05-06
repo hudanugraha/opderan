@@ -1,0 +1,27 @@
+.tambahpaddingleftright {
+    padding-left: 3vh;
+    padding-right: 3vh;
+    border-bottom: none;
+}
+
+ion-segment {
+    background-color: transparent;
+}
+ion-segment-button{
+    max-width:25vh;
+    --border-radius: 20px;
+    --indicator-color: var(--ion-color-primary);
+    --background: #e0e0e0;
+}
+
+ion-segment-button.ios {
+    --color: #000;
+    --color-checked: #fff;
+    --border-radius: 20px;
+    --transition:'horizontal';
+  }
+
+  .icon-akandatang {
+    --color:var(--ion-color-primary);
+  }
+ 

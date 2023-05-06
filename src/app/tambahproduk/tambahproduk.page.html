@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>Tambah Produk</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/produk"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-input label="Nama Produk" label-placement="floating" fill="outline" placeholder="Masukkan nama"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-input label="Harga Pokok (Rp)" label-placement="floating" fill="outline" placeholder="Masukkan harga pokok"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-input label="Harga Jual (Rp)" label-placement="floating" fill="outline" placeholder="Masukkan harga jual"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+          <ion-list>
+            <ion-item>
+              <ion-select class="kategori" aria-label="Kategori" label-placement="floating" placeholder="Pilih Kategori Produk" fill="Outline">
+                <ion-select-option value="apples">Apples</ion-select-option>
+                <ion-select-option value="oranges">Oranges</ion-select-option>
+                <ion-select-option value="bananas">Bananas</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-checkbox labelPlacement="end" color="primary">Tampilkan di transaksi</ion-checkbox>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="block" color="primary" shape="round">TAMBAH</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

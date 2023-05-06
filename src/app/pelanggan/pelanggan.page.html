@@ -1,0 +1,39 @@
+<ion-header >
+  <ion-toolbar color="primary" class="toolbar">
+    <ion-searchbar></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+    <ion-text class="ion-text-center" >
+      <p>Ada 2 pelsanggan</p>
+     </ion-text>  
+
+
+            <ion-card *ngFor="let pelanggan of pelanggans">
+              <ion-card-content>
+                  <ion-row class="ion-no-padding">
+                    <ion-col size="11" class="teks-hitam">
+                      {{ pelanggan.nama }}<br/>
+                      {{ pelanggan.no_hp }}
+                    </ion-col>
+                    <ion-col size="1" class="teks-hitam">
+                        <ion-icon name="pencil-outline"></ion-icon><br/>
+                        <ion-icon name="trash-outline"></ion-icon>
+                    </ion-col>
+                  </ion-row>
+              </ion-card-content>
+            </ion-card> 
+
+            <!-- <ion-infinite-scroll (ionInfinite)="onIonInfinite($event)">
+              <ion-infinite-scroll-content></ion-infinite-scroll-content>
+            </ion-infinite-scroll> -->
+            
+            <!-- <ion-button-- (click)="addData()">ADD DATA</ion-button-->
+
+    <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+      <ion-fab-button routerLink="/tambahpelanggan">
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+</ion-content>
